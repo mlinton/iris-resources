@@ -9,14 +9,49 @@
     "tags": ["ransomware", "malware"],
     "tasks": [
       {
-        "title": "Identify infected systems",
-        "description": "Determine the scope of the infection by identifying affected systems and users",
-        "tags": ["infection", "scope"]
+        "title": "Identify Threat Indicators",
+        "description": "Collect and verify alerts and notifications related to the suspected ransomware event.  This can include tickets, SIEM alerts, Anti-virus / EDR events, DNS reports, Web Proxy reports and Errors from Mail servers",
+        "tags": ["identification", "analysis"]
       },
       {
-        "title": "Contain the infection",
+        "title": "Identify Risk Factors",
+        "description": "Identify common and company specific risk factors that include:  Credential theft, Malware delivery, Criminal activities (including blackmail / ransom), Financial losses",
+        "tags": ["identification", "analysis"]
+      },
+      {
+        "title": "Collect related Data",
+        "description": "Collect and document information about the incident.  This includes Domain name information (DNS), IP addresses, User Account names, System Names, Ransomware artifacts, ",
+        "tags": ["identification", "analysis"]
+      },
+      {
+        "title": "Categorize incident severity",
+        "description": "Based on the collected threat indicators, risk factors and related data, assign a categorization of the serverity of the incident",
+        "tags": ["identification", "analysis"]
+      },
+      {
+        "title": "Verify the Incident",
+        "description": "Conduct verification of the collected data with the incident response lead.  Double check the previously supplied information, and attempt to rule out false-positive conditions",
+        "tags": ["analysis", "verification"]
+      },
+      {
+        "title": "Identify the type of Ransomware",
+        "description": "If possible identify the type of ransomware based on the artifacts collected.  Types can include DDoS, Encrypted Systems, Threats of Disclosure",
+        "tags": ["analysis", "verification"]
+      },
+      {
+        "title": "Is Threat Actor still present in the environment",
+        "description": "Attempt to identify if the threat actor is still active in the environment.  Has the encryption process completed?  Is it in progress?",
+        "tags": ["analysis", "verification"]
+      },  
+      {
+        "title": "Confirm if reliable backups exist",
+        "description": "Based on the assets affected, confirm that backups of the data within these assets exist, determine the recovery point and recovery time capabilities of the available backups.  Collect information on what is required for recovery.",
+        "tags": ["analysis", "verification"]
+      },  
+      {
+        "title": "",
         "description": "Isolate infected systems and disable network shares to prevent further spread",
-        "tags": ["containment", "network"]
+        "tags": ["identification", "analysis"]
       },
       {
         "title": "Analyze ransomware",
